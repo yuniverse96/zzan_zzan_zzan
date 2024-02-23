@@ -1,0 +1,174 @@
+@import "reset.css";
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+#wrap{
+    width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-bottom: 100px;
+    background: linear-gradient(124deg, #2d99fd, #def3f3, #e8b71d, #098e1f, #a600ff,#2d99fd, #def3f3, #e8b71d);
+    background-size: 1800% 1800%;
+    -webkit-animation: zzan 18s ease infinite;
+    -z-animation: zzan 18s ease infinite;
+    -o-animation: zzan 18s ease infinite;
+      animation: zzan 18s ease infinite;
+}
+
+@-webkit-keyframes zzan {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes zzan {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes zzan {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes zzan { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+
+
+
+/*헤더*/
+#header {
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+    box-sizing: border-box;
+    font-family: 'PyeongChangPeace-Bold';
+    color: #fff;
+    font-size: 5rem; 
+    text-align: center;
+}
+
+#header .tab_menu {
+    width: 100%;
+    margin-top: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#header .tab_menu li {
+    width: 16vw;
+    height: auto;
+    overflow: hidden;
+
+}
+#header .tab_menu li > img {
+    width: 120%;
+    height: auto;
+    margin-left: -20px;
+}
+
+
+/*스크롤 다운*/
+.scroll_down {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin: 5% auto;
+}
+
+.scroll_down .chevron {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+}
+  
+.scroll_down .chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+}
+  
+.scroll_down .chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+}
+  
+.scroll_down .chevron:before,
+.scroll_down .chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #fff;
+}
+
+.scroll_down .chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+}
+  
+.scroll_down .chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+}
+  
+  @keyframes move {
+    25% {
+      opacity: 1;
+  
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+  }
+  
+  .scroll_down .text {
+    display: block;
+    margin-left: -30px;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: .25;
+    animation: pulse 2s linear alternate infinite;
+  }
+  
+  @keyframes pulse {
+    to {
+      opacity: 1;
+    }
+  }
+
+#content {
+    width: 80vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-color: #fff;
+    border-radius: 20px;
+
+}
+
+
