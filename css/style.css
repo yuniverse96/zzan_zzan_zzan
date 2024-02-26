@@ -21,28 +21,28 @@
 body {
   background: linear-gradient(124deg, #a9d5ff, #ffffff, #ffe99f, #e5ffcc, #e8bcff,#a9d5ff, #ffffff, #ffe99f);
     background-size: 1800% 1800%;
-    -webkit-animation: zzan 18s ease infinite;
-    -z-animation: zzan 18s ease infinite;
-    -o-animation: zzan 18s ease infinite;
-      animation: zzan 18s ease infinite;
+    -webkit-animation: back 18s ease infinite;
+    -z-animation: back 18s ease infinite;
+    -o-animation: back 18s ease infinite;
+      animation: back 18s ease infinite;
 }
 
-@-webkit-keyframes zzan {
+@-webkit-keyframes back {
     0%{background-position:0% 82%}
     50%{background-position:100% 19%}
     100%{background-position:0% 82%}
 }
-@-moz-keyframes zzan {
+@-moz-keyframes back {
     0%{background-position:0% 82%}
     50%{background-position:100% 19%}
     100%{background-position:0% 82%}
 }
-@-o-keyframes zzan {
+@-o-keyframes back {
     0%{background-position:0% 82%}
     50%{background-position:100% 19%}
     100%{background-position:0% 82%}
 }
-@keyframes zzan { 
+@keyframes back { 
     0%{background-position:0% 82%}
     50%{background-position:100% 19%}
     100%{background-position:0% 82%}
@@ -72,29 +72,76 @@ body {
 }
 
 #header .tab_menu {
-    width: 100%;
-    margin-top: 50px;
+    width: 45%;
+    height: 40vh;
+    margin: 50px auto 0;
     box-sizing: border-box;
-    display: flex;
+    position: relative;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+  
 }
 
 #header .tab_menu li {
     width: 16vw;
     height: auto;
     overflow: hidden;
+    position: absolute;
 
 }
+
 #header .tab_menu li > img {
     width: 120%;
     height: auto;
     margin-left: -20px;
 }
 
+#header .tab_menu li:first-child {
+  left: 0;
+  animation: right 3s infinite;
+  animation-direction: alternate-reverse;
+}
+#header .tab_menu li:nth-child(2) {
+  left: 50%;
+  top:0;
+  transform: translate(-50%,0);
+  animation: top 3s infinite;
+  animation-direction: alternate-reverse;
+}
+#header .tab_menu li:last-child {
+  right: 0;
+  animation: left 3s infinite;
+  animation-direction: alternate-reverse;
+}
+
+@-webkit-keyframes right {
+  0% {left: 0; transform: rotate(0)}
+  50% {left: 0; transform: rotate(0)}
+  100%{left: 8%; transform: rotate(15deg)}
+}
+
+@-webkit-keyframes left {
+  0% {right: 0; transform: rotate(0);}
+  50% {right: 0; transform: rotate(0);}
+  100%{right: 8%; transform: rotate(-15deg);}
+}
+
+@-webkit-keyframes top {
+  0% {top: 0;}
+  50% {top: 0;}
+  100%{top: -15%;}
+}
+
+
+
+
+
+
 
 /*스크롤 다운*/
+/* 
 .scroll_down {
     position: relative;
     width: 24px;
@@ -175,7 +222,7 @@ body {
     to {
       opacity: 1;
     }
-  }
+  } */
 
 #content {
     width: 80vw;
