@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <title>오늘도 짠짠짠</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   
 </head>
 <body>
@@ -36,9 +37,23 @@
         </div> -->
 
         <div id="content">
-            <section id="wine"></section>
-            <section id="soju"></section>
-            <section id="bier"></section>
+            <div id="search_wrap">
+                <input type="text" class="search_data" placeholder="오늘의 주종은?">
+                <button type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <div id="hash_wrap">
+                <ul>
+                    <li>와인</li>
+                    <li>소주</li>
+                    <li>막걸리</li>
+                    <li>맥주</li>
+                    <li>사이다</li>
+                    <li>스파클링</li>
+                    <li>위스키</li>
+                </ul>
+            </div>
         </div>
     
     </div>

@@ -1,4 +1,5 @@
 @import "reset.css";
+
 @font-face {
     font-family: 'PyeongChangPeace-Bold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
@@ -227,11 +228,73 @@ body {
 #content {
     width: 80vw;
     margin: 0 auto;
-    box-sizing: border-box;
     min-height: 100vh;
     background-color: #fff;
     border-radius: 20px;
+    padding: 50px 30px;
+    box-sizing: border-box;
+  
+}
+
+#search_wrap {
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  border-radius: 40px;
+  background-color: rgba(245, 247, 250, 0.8);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+#search_wrap input {
+  background: none;
+  border: none;
+  width: 10px;
+  height: 100%;
+  flex: 1 1 0;
+  font-size: 1.5rem;
+}
+
+#search_wrap input::placeholder {
+  color: #7c7c7c;
+}
+#search_wrap button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color:#9bcefe;
+}
+
+#search_wrap button:active {
+  color: #7094b7;
+}
+
+#hash_wrap {
+  width: 100%;
+}
+#hash_wrap ul{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+  box-sizing: border-box;
 
 }
+#hash_wrap ul li {
+  padding: 4px 8px;
+  border-radius: 200px;
+  border: 1px solid #9bcefe;
+  background-color: #fff;
+  color: #9bcefe;
+} 
+#hash_wrap ul li::before {
+  content: "#";
+  display: inline-block;
+}
+
 
 
