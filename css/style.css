@@ -1,20 +1,15 @@
 @import "reset.css";
 
+
 @font-face {
-    font-family: 'PyeongChangPeace-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-  font-family: 'KCC-Ganpan';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+  font-family: 'TTHakgyoansimKkwabaegiR';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimKkwabaegiR.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'TTHakgyoansimKkwabaegiR';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimKkwabaegiR.woff2') format('woff2');
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +21,7 @@ body {
     -z-animation: back 18s ease infinite;
     -o-animation: back 18s ease infinite;
       animation: back 18s ease infinite;
+  font-family: 'SUIT', sans-serif;
 }
 
 @-webkit-keyframes back {
@@ -295,6 +291,153 @@ body {
   content: "#";
   display: inline-block;
 }
+
+#info_all_wrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 20px;
+}
+
+#info_all_wrap .info_box {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 1px 5px 5px rgb(0,0,0 , 0.08)
+ 
+}
+
+
+#info_all_wrap .info_box .img_wrap {
+  width: 20%;
+  height: auto;
+  overflow: hidden;
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  z-index: 100;
+}
+#info_all_wrap .info_box .img_wrap > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#info_all_wrap .info_box .prd_info .half_top {
+  position: relative;
+  width: 100%;
+  height: 35vh;
+  max-height: 550px;
+  overflow: hidden;
+  pointer-events : none;
+}
+
+#info_all_wrap .info_box .prd_info .half_top p {
+  width: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  bottom: 0;
+  left: 0;
+  padding: 10vh 30px 30px;
+  color: #fff;
+  font-family: 'GmarketSansMedium';
+  font-weight: bold;
+  text-transform: capitalize;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5))
+}
+
+#info_all_wrap .info_box .prd_info .half_top > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#info_all_wrap .info_box .prd_info .prd_txt {
+  width: 78%;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  
+}
+
+#info_all_wrap .info_box .prd_info .prd_txt span {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #666;
+}
+
+
+#info_all_wrap .info_box .prd_info .prd_txt h3 {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #202020;
+
+}
+
+#info_all_wrap .info_box .prd_info .prd_txt .area {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 15px 0;
+}
+
+/*별점*/
+#info_all_wrap .info_box .prd_info .prd_txt .star {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+}
+#info_all_wrap .info_box .prd_info .prd_txt .star .full::after {
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+  color: #ff7979;
+}
+
+#info_all_wrap .info_box .prd_info .prd_txt .star .half::after {
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+  color: #d2d2d2;
+}
+
+
+/*리뷰*/
+#info_all_wrap .info_box .prd_info .review_wrap {
+  width: 100%;
+  padding: 15px 30px;
+  box-sizing: border-box;
+}
+
+#info_all_wrap .info_box .prd_info .review_wrap .icon::after{
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f10d";
+  color: #e6e8ea;
+
+}
+
+#info_all_wrap .info_box .prd_info .review_wrap p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5rem;
+
+}
+
+/* {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+} */
+
+
+
+
 
 
 
