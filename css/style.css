@@ -295,24 +295,42 @@ body {
   display: inline-block;
 }
 
+
+
+
+/*정보*/
 #info_all_wrap {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px 20px;
+
 }
 
 #info_all_wrap .info_box {
-  position: relative;
   width: 100%;
   height: 70vh;
   max-height: 550px;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 1px 5px 5px rgb(0,0,0 , 0.08)
- 
 }
 
+#info_all_wrap .info_box .cover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* border-radius: 20px; */
+  /* overflow: hidden; */
+  /* background-color: #fff; */
+  /* box-shadow: 1px 5px 5px rgb(0,0,0 , 0.08) */
+}
+
+#info_all_wrap .info_box .cover .prd_info {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 1px 5px 5px rgb(0,0,0 , 0.08);
+  background-color: #fff;
+}
 
 #info_all_wrap .info_box .img_wrap {
   width: 20%;
@@ -334,6 +352,7 @@ body {
   width: 100%;
   height: 35vh;
   max-height: 300px;
+  border-radius: 20px 20px 0 0;
   overflow: hidden;
   pointer-events : none;
 }
@@ -362,7 +381,6 @@ body {
   width: 78%;
   padding: 20px 30px;
   box-sizing: border-box;
-  
 }
 
 #info_all_wrap .info_box .prd_info .prd_txt span {
@@ -431,13 +449,71 @@ body {
 
 }
 
-/* {
-  margin: 5px;
-  font-size: 1.25em;
-  font-family: FontAwesome;
-  display: inline-block;
-  content: "\f005";
-} */
+
+
+/*클릭시 활성화*/
+
+/*스크롤 제거*/
+body:has(.info_box.active) {
+  overflow-y: hidden;
+}
+
+#info_all_wrap .info_box.active {
+  position: fixed;
+  max-height: none;
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 500;
+}
+
+#info_all_wrap .info_box.active::before{
+  display: block;
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+
+#info_all_wrap .info_box .close{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: -30px;
+  top: -30px;
+}
+
+
+#info_all_wrap .info_box.active .cover {
+  width: 80vw;
+  max-width: 1024px;
+  height: 80vh;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#info_all_wrap .info_box.active .cover .prd_info {
+  overflow-y: scroll;
+}
+
+#info_all_wrap .info_box.active .img_wrap {
+  width: 10%;
+  height: auto;
+  overflow: hidden;
+  position: absolute;
+  top: 10vh;
+  bottom: unset;
+  right: 10%;
+  z-index: 100;
+}
+
 
 
 
