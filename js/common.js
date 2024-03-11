@@ -1,8 +1,5 @@
 $(function() {
    
-
-
-    
     //박스 이벤트
     $(".info_box .cover").on('click', function(){
         $(".info_box").removeClass("active");
@@ -16,5 +13,20 @@ $(function() {
         $('.close').remove();
     });
 
- 
+
+   
+});
+
+
+function find_alcohol()  {
+    let find_name = $(".search_data").val();
+    $(".info_box").not('[data-alcohol*="'+find_name+'"]').hide();
+}
+
+$( '.search_data' ).keydown(function(event) {
+    //백스페이스키 keyCode 8
+    if ( event.keyCode === 8 ) {
+        $(".info_box").show();
+    }
+    
 });

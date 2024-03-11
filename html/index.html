@@ -39,8 +39,8 @@
 
         <div id="content">
             <div id="search_wrap">
-                <input type="text" class="search_data" placeholder="오늘의 주종은?">
-                <button type="submit">
+                <input type="text" class="search_data" placeholder="오늘의 주종은?" onkeyup="if(window.event.keyCode==13){find_alcohol()}">
+                <button type="submit" onclick="find_alcohol()">
                     <i class="fa fa-search"></i>
                 </button>
             </div>
@@ -58,7 +58,7 @@
 
             <!--정보-->
             <div id="info_all_wrap">
-                <div class="info_box">
+                <div class="info_box" data-alcohol="wine 와인">
                     <section class="cover">
                         <div class="prd_info">
                             <div class="half_top">
@@ -96,7 +96,7 @@
                     </section>
                 </div>
 
-                <div class="info_box">
+                <div class="info_box" data-alcohol="liqueur 리큐르 매실주">
                     <section class="cover">
                         <div class="prd_info">
                             <div class="half_top">
@@ -134,7 +134,7 @@
                     </section>
                 </div>
 
-                <div class="info_box">
+                <div class="info_box" data-alcohol="Liqueur 리큐르 소주">
                     <section class="cover">
                         <div class="prd_info">
                             <div class="half_top">
@@ -171,7 +171,7 @@
                     </section>
                 </div>
 
-                <div class="info_box">
+                <div class="info_box" data-alcohol="soju 소주">
                     <section class="cover">
                         <div class="prd_info">
                             <div class="half_top">
@@ -209,7 +209,7 @@
                     </section>
                 </div>
 
-                <div class="info_box">
+                <div class="info_box" data-alcohol="beir 맥주" >
                     <section class="cover">
                         <div class="prd_info">
                             <div class="half_top">
@@ -219,7 +219,7 @@
                                 </div>
                                 <div class="back_wrap">
                                     <p>Blanc 1664</p>
-                                    <img class="back_ground" src="../source/wine_back.jpeg" alt="지역">
+                                    <img class="back_ground" src="../source/blanc_back.jpeg" alt="지역">
                                 </div>
                                 <!--상품 간략 정보-->
                                 <div class="prd_txt">
@@ -246,7 +246,7 @@
                     </section>
                 </div>
 
-                <div class="info_box">
+                <div class="info_box" data-alcohol="whisky 위스키">
                     <section class="cover">
                         <div class="prd_info">
                             <div class="half_top">
@@ -284,7 +284,7 @@
                     </section>
                 </div>
 
-                <div class="info_box">
+                <div class="info_box" data-alcohol="Makgeolli 막걸리">
                     <section class="cover">
                         <div class="prd_info">
                             <div class="half_top">
@@ -322,7 +322,7 @@
                     </section>
                 </div>
 
-                <div class="info_box">
+                <div class="info_box" data-alcohol="Makgeolli 막걸리">
                     <section class="cover">
                         <div class="prd_info">
                             <div class="half_top">
@@ -331,7 +331,7 @@
                                     <img src="../source/mapcy_black.webp" alt="막걸리">
                                 </div>
                                 <div class="back_wrap">
-                                    <p>cloud bay</p>
+                                    <p>mapcy</p>
                                     <img class="back_ground" src="../source/mapcy_back.png" alt="지역">
                                 </div>
                                 <!--상품 간략 정보-->
@@ -344,8 +344,7 @@
                                         <li class="full"></li>
                                         <li class="full"></li>
                                         <li class="full"></li>
-                                        <li class="half">
-                                        </li>
+                                        <li class="full"></li>
                                     </ul>
                                 </div>
                             </div>
