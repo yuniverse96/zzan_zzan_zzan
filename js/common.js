@@ -1,10 +1,6 @@
 
-$("img").lazyload({placeholder : "https://i.gifer.com/g0RB.gif"});
-
-
-
 $(function() {
-   
+
     //박스 이벤트
     $(".info_box .cover").on('click', function(){
         $(".info_box").removeClass("active");
@@ -18,8 +14,6 @@ $(function() {
         $('.close').remove();
     });
 
-
-   
 });
 
 
