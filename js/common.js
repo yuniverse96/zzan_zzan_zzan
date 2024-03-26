@@ -1,3 +1,8 @@
+
+$("img").lazyload({placeholder : "https://i.gifer.com/g0RB.gif"});
+
+
+
 $(function() {
    
     //박스 이벤트
